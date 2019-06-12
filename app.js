@@ -1,17 +1,13 @@
-const chalk = require('chalk')
-const chalkAnimation = require('chalk-animation');
+const chalk = require("chalk");
+const chalkAnimation = require("chalk-animation");
 const getNotes = require("./notes.js");
 
-const text = getNotes();
-console.log(text);
+const command = process.argv[2]
 
-console.log(chalk.bgGreen('Success!'))
-const rainbow = chalkAnimation.rainbow('Lorem ipsum'); // Animation starts
+if (command === 'add') {
+  console.log('Adding note')
+} else if (command === 'remove') {
+  console.log('Removing note')
+}
 
-setTimeout(() => {
-    rainbow.stop(); // Animation stops
-}, 1000);
-
-setTimeout(() => {
-    rainbow.start(); // Animation resumes
-}, 2000);
+console.log(process.argv)
