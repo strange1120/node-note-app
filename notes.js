@@ -44,5 +44,3 @@ module.exports = {
   getNotes: getNotes,
   addNote: addNote
 };
-console.log("ubututest")
-
